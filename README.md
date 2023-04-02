@@ -1,4 +1,4 @@
-# Study_JavaScript
-자바스크립트를 공부하는 곳입니다!
+## JavaScript STUDY
+안드쟁이의 JavaScript 공부!</br></br>
 
-__Goal : 2021안에 리액트 네이티브 공부하기!__
+[DOCUMENT](https://minjae1230.notion.site/4211ad709bed4ce9bf09e7e638ac5238)
