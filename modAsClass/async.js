@@ -14,3 +14,50 @@ const result = sigma(start, end);
 // console.log 역시 실행되지 않는다.
 console.log(result);
 
+// promise
+function test(value) {
+    return new Promise((resolve, reject) => {
+        if (value >= 0)
+            resolve('ok');
+        else
+            reject('error');
+    });
+}
+
+test(1)
+    .then((result)=>{console.log(result);})
+    .catch((error)=>{console.log(error);})
+
+// async await
+function test2(value) {
+    return new Promise((resolve, reject)=>{
+        resolve('ok');
+    });
+}
+
+async function runTest() {
+    const result = await test(1);
+    console.log(result);
+}
+
+runTest();
+
+function test3(value) {
+    return new Promise((resolve, reject)=>{
+        if(value >= 0)
+            resolve('ok');
+        else
+            reject('ng');
+    });
+}
+
+async function runTest2() {
+    try {
+        const result = await test3(-1);
+        console.log(result);
+    } catch(error) {
+        console.log(error);
+    }
+}
+
+runTest2();
