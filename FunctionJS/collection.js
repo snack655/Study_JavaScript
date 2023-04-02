@@ -83,4 +83,3 @@ console.log('for of');
 for(let i of iterArr) {
     console.log(i + 1); // 2, 4, 6, 8, 10
 }
-
