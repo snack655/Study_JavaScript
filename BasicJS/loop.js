@@ -41,6 +41,8 @@ for(let inI=0; inI < 2; inI++) {
     }
 }
 
+// break
+
 let breakI = 0;
 while(true) {
     console.log(breakI);
@@ -63,6 +65,8 @@ for(let oneI = 0; oneI < 3; oneI++) {
     }
 }
 
+// continue 
+
 for(let conI = 0; conI < 7; conI++) {
     if(conI % 2 == 1) continue;
     else console.log(conI);
@@ -76,4 +80,21 @@ while(wConI < 7) {
     } else {
         console.log(wConI);
     }
+}
+
+// 라벨
+outer: // label
+for(let lai = 0; lai < 3; lai++) {
+    inner: // label
+    for(let laj = 0; laj < 3; laj++) {
+        if(lai + laj > 2) break outer;
+        console.log(`${lai} + ${laj} = ${lai + laj}`);
+    }
+}
+
+myBlock: {
+    let lai2 = 0;
+    console.log(lai2);
+    if(i == 0) break myBlock;
+    console.log('Dead code..');
 }
