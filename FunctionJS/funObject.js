@@ -104,3 +104,14 @@ let typeObj = {
 console.log(typeObj)
 typeOp(typeObj)
 console.log(typeObj)
+
+
+// 객체의 함수
+const funObj = {
+    id: 1,
+    func() {
+        console.log(this.id)
+    }
+}
+
+funObj.func();
