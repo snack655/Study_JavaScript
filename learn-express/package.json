@@ -1,0 +1,18 @@
+{
+  "name": "mooooongspress",
+  "version": "0.0.1",
+  "description": "moooong's express study",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app"
+  },
+  "author": "mooooong",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
