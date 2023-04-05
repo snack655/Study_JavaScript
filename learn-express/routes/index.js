@@ -12,7 +12,9 @@ router
         res.send("Hello users");
     })
     .get((req, res, next) => {
-        res.send("Hello users");
+        res.locals.value = 3;
+        res.locals.array = ['a', 'b', 'c', 'd'];
+        res.render("index", { name: 'USER' });
     })
     .put((req, res, next) => {
         res.send("Hello users");

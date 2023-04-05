@@ -4,13 +4,14 @@
   "description": "moooong's express study",
   "main": "app.js",
   "scripts": {
-    "test": "nodemon app"
+    "start": "nodemon app"
   },
   "author": "mooooong",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
