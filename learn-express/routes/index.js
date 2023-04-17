@@ -1,4 +1,5 @@
 const express = require("express");
+const sequelize = require("sequelize");
 
 const router = express.Router();
 
@@ -6,18 +7,17 @@ const router = express.Router();
 //   res.send("Hello users");
 // });
 
-router
-    .route('/')
-    .post((req, res, next) => {
-        res.send("Hello users");
-    })
-    .get((req, res, next) => {
-        res.locals.value = 3;
-        res.locals.array = ['a', 'b', 'c', 'd'];
-        res.render("index", { name: 'USER' });
-    })
-    .put((req, res, next) => {
-        res.send("Hello users");
-    });
+const sequelize
 
-module.exports = router;
+db.sequelize = sequelize;
+
+db.User = User;
+db.Comment = Comment;
+
+User.initiate(sequelize);
+Comment.initiate(sequelize);
+
+User.associate(db);
+Comment.associate(db);
+
+module.exports = db;

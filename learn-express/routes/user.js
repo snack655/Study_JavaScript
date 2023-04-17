@@ -1,15 +1,38 @@
-const express = require('express');
+const Sequelize = require('sequelize');
 
-const router = express.Router();
-
-router.get('/', (req, res, next) => {
-    res.send('Hello user');
-});
-
-router.get('/:id', (req, res, next) => {
-    const id = req.params.id;
-    const query = req.query;
-    console.log(query);
-    res.send(`Hello ${id}`);
-});
-module.exports = router;
+class User extends Sequelize.Model {
+    static initiate(sequelize) {
+        User.initiate(
+            {
+                name: {
+                    type: Sequelize.INTEGER.UNSIGNED,
+                    allowNull:false
+                },
+                married: {
+                    type:Sequelize.BOOLEAN,
+                    allowNull:false,
+                },
+                comment: {
+                    type: Sequelize.TEXT,
+                    allowNull:true,
+                },
+                created_at: {
+                    type: Sequelize.DATE,
+                    allowNull: false,
+                    defaultValue: Sequelize.NOW
+                },
+            },
+            {
+                sequelize,
+                timestamps:false,
+                underscored:false,
+                modelName: 'User',
+                tableName: 'users',
+                paranoid: false,
+                charset: 'utf8',
+                collate: 'utf8_general_ci',
+            }
+        );
+    }
+    static associate(db) {}
+}

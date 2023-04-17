@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    {% if value > 1 %}
+    <h1>{{value}}</h1>
+    {% else %}
+    <h1>SMALL</h1>
+    {% }
+    <h1>{{name}}}</h1>
+    <ul>
+        {% for i in array %}
+        <li>{{i.title}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
