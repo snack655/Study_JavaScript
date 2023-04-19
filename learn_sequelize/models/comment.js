@@ -16,8 +16,10 @@ class Comment extends Sequelize.Model {
       },
       {
         sequelize,
-        timestamps: "Comment",
-        tableName: "Comments",
+        timestamps: false,
+        underscored: false,
+        modelName: "Comments",
+        tableName: "comments",
         paranoid: false,
         charset: "utf8mb4",
         collate: "utf8mb4_general_ci",

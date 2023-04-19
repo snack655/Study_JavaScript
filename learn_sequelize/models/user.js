@@ -34,7 +34,7 @@ class User extends Sequelize.Model {
         modelName: "User",
         tableName: "users",
         paranoid: false,
-        charset: "utf8",
+        charset: "utf8mb4",
         collate: "utf8_general_ci",
       }
     );
